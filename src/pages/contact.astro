@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Contact Audiolabs"> 
+    <section class="container-m mx-auto">
+        <div class="mx-2 border-b border-black">
+            <h1 class="text-3xl font-medium my-3 lg:text-5xl lg:my-6">↳CONTACT</h1>
+        </div>
+    </section>
+    <section class="container-m mx-auto">
+        <div class="px-2">
+            <div class="mb-6 lg:mb-0 border-b border-black">
+                <div class="lg:flex my-4 lg:my-10">
+                    <div class="lg:w-[40%] lg:pr-6 lg:border-r lg:border-black">
+                        <div class="rounded-2xl bg-[url(../images/Recording-2.jpg)] h-[75vh] w-full bg-center bg-cover lg:h-[60vh]"></div>
+                    </div>
+                    <div class="lg:w-[60%] lg:mx-12">
+                        <form action="">
+                            <div class="lg:flex lg:gap-6">
+                                <div class="lg:w-[50%]">
+                                    <label class="block mt-4 lg:mt-0 font-medium" for="name">Name:</label>
+                                    <input class="w-full py-2 border-b border-black bg-transparent pb-1" type="text" name="name" id="name" placeholder="Ben Klock">
+                                </div>
+                                <div class="lg:w-[50%]">
+                                    <label class="block mt-4  lg:mt-0 font-medium" for="name">Email:</label>
+                                    <input class="w-full py-2 border-b border-black bg-transparent pb-1" type="text" name="email" id="email" placeholder="benklock@gmail.com">
+                                </div>
+                            </div>
+                            <div class="lg:flex lg:gap-6 lg:mt-2">
+                                <div class="lg:w-[50%]">
+                                    <label class="block mt-4 font-medium" for="number">Phone Number:</label>
+                                    <input class="w-full py-2 border-b border-black bg-transparent pb-1" type="text" name="phone" id="phone" placeholder="0466 923 884">
+                                </div>
+                                <div class="lg:w-[50%]">
+                                    <label class="block mt-4 font-medium" for="subject">Subject:</label>
+                                    <input class="w-full py-2 border-b border-black bg-transparent pb-1" type="text" name="subject" id="subject" placeholder="New track mixing">
+                                </div>
+                            </div>
+                            <div class="lg:mt-6">
+                                <label class="block mt-4 font-medium" for="message">Message:</label>
+                                <textarea class="w-full py-2 border-b border-black bg-transparent pb-1" name="message" id="message" placeholder="Message" rows="6s"></textarea>
+                            </div>
+                            <button class="text-center mt-4" type="submit"><p class="inline-block bg-black py-2 pl-5 pr-4 text-white rounded-xl xl:mb-6">Send message<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

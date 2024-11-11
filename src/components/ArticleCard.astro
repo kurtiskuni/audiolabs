@@ -1,0 +1,48 @@
+--- 
+import { formatDate } from "../utils";
+const { article } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    article: CollectionEntry<'blog'>
+}
+
+---
+<style>
+
+@media (min-width: 1024px) { 
+  .article-container:nth-child(-n+1) {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  }
+  .article-container:nth-child(-n+2) {
+  border-right: 1px solid black;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  }
+  .article-container:nth-child(-n+3) {
+  border-right: 1px solid black;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  }
+  .article-container:nth-child(-n+4) {
+  border-right: 1px solid black;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  }
+}
+</style>
+<!-- Article Card -->
+ <div class="article-container border-b border-black mb-6 lg:mb-0 lg:border-b-0">
+   <a href={'/articles/' + article.slug} class="lg:border-b-0 pt-4">
+     <img src={'/images/' + article.data.image} alt="">
+     <div class="py-4">
+       <p class="text-[#E56134] text-sm font-deco">{formatDate(article.data.pubDate)}</p>
+       <h5 class="text-xl font-medium my-2">{article.data.title}</h5>
+       <p class="font-deco">{article.data.articleNumber}</p>
+       </div>
+     </div>
+   </a>
+ </div>

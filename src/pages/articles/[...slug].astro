@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../../utils";
+
+export async function getStaticPaths() {
+    const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog');
+
+    return allBlogArticles.map(entry => ({
+        params: {
+            slug: entry.slug
+        },
+        props: {entry}
+    }));
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+---
+
+<Layout>
+    <section class="container-m mx-auto">
+        <div class="px-2">
+            <article class="border-b border-black mb-6 lg:mb-0">
+                <div class="lg:flex lg:my-10">
+                    <div class="lg:w-[35%] pr-10 lg:border-r lg:border-black">
+                        <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl mb-6" />
+                    </div>
+                    <div class="lg:w-[65%] lg:mx-10">
+                        <h1 class="text-2xl font-medium mb-2 lg:text-4xl">{entry.data.title}</h1>
+                        <p class="font-deco font-medium text-xl">{entry.data.articleNumber}</p>
+                        <p class="text-[#E56134]">{formatDate(entry.data.pubDate)}</p>
+                        <Content />
+                        
+                        <a href="/articles"><p class="bg-black py-2 pl-5 pr-4 text-white inline-block rounded-xl mb-4">Back to Articles<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</Layout>
+
+<style is:global>
+    p {
+        margin: 20px 0;
+    }
+    h2 {
+        margin: 20px 0;
+        font-size: 1.8rem;
+    }
+
+</style>

@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '../styles/testimonials.css'
+import { HOMEPAGE_ARTICLE_LIMIT } from '../constants';
+import ArticleCard from '../components/ArticleCard.astro';
+
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const allBlogArticles: CollectionEntry<'blog'> [] = (await getCollection('blog')).sort((a:CollectionEntry<'blog'>,b:CollectionEntry<'blog'> ) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
+const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(0);
+---
+
+<Layout title="Home page title"> 
+  <section class="container-m mx-auto px-2 border-b border-black lg:flex lg:gap-[8%] lg:py-6">
+    <div class="lg:w-[47%]">
+      <h1 class="text-2xl mb-4 mt-2 md:text-4xl"><b>Melbourne’s Premier Audio Production:</b> Tailored Sound Design, Recording, and Mixing at AudioLabs</h1>
+      <p class="font-deco mb-4 lg:mb-6 lg:block">From podcasts to newly created music, AudioLabs brings your vision to life with expert sound design, mixing, and recording—crafted specifically for your project</p>
+      <a href="/contact"><p class="hidden bg-black py-2 pl-5 pr-4 text-white lg:inline-block rounded-xl mb-4">Lets talk<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+    </div>
+    <div class="mb-3 lg:mb-0 lg:w-[53%]">
+      <div class="mb-2">
+        <div class="mb-2 rounded-xl h-[180px] lg:h-[300px] w-full bg-[url('../images/Studio-15.jpg')] bg-cover bg-center">
+      </div>
+      <div class="flex gap-2">
+        <img loading="eager" class="w-[49%] rounded-xl" src="../images/Studio-3.jpg" alt="">
+        <img loading="eager" class="w-[49%] rounded-xl" src="../images/Studio-10.jpg" alt="">
+      </div>
+    </div>
+    <a class=" lg:hidden" href="/contact"><p class="bg-black py-2.5 pl-5 pr-4 text-white inline-block rounded-xl mb-4">Lets talk<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+  </section>
+  <section class="container-m mx-auto px-2 border-b border-black py-6">
+    <div class="flex w-full gap-[3%]">
+      <img class="w-[15%] animate-spin-anticlockwise" src="../images/logo-dark.png" alt="">
+      <img class="w-[82%]" src="../images/audio-labs.png" alt="">
+    </div>
+  </section>
+  <section class="container-m lg:mx-auto py-2 lg:py-6">
+    <div class="lg:flex mx-2 lg:border-b lg:border-black">
+      <div class="pb-16 border-b border-black lg:w-[40%] lg:pb-6 lg:border-b-0">
+        <div class="lg:border-r border-black h-full lg:flex lg:flex-col lg:justify-between">
+          <h2 class="text-2xl font-medium lg:text-4xl">What we do</h2>
+          <a href="/services"><p class="hidden bg-black py-2 pl-5 pr-4 text-white lg:inline-block rounded-xl mb-4">Services<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+        </div>
+      </div>
+      <div class="lg:w-[60%]">
+        <div class="lg:flex">
+          <div class="border-b border-black py-4 lg:ml-6 lg:py-0 lg:w-[50%]">
+            <div class=" lg:border-r lg:border-black lg:pr-4 lg:pb-10 lg:mb-6">
+              <div class="flex w-full gap-2">
+                <img class="w-[26px] h-[26px]" src="../images/logo-dark.png" alt="">
+                <h3 class="text-xl font-medium mb-4">Recording</h3>
+              </div>
+              <p>Our RME powered recording system will deliver professional level recordings. Get in contact to
+              book in a session!</p>
+            </div>
+          </div>
+          <div class="border-b border-black py-4 lg:pl-6 lg:py-0 lg:pb-6  lg:w-[50%]">
+            <div class="flex w-full gap-2">
+              <img class="w-[26px] h-[26px]" src="../images/logo-dark.png" alt="">
+              <h3 class="text-xl font-medium mb-4">Audio Editing</h3>
+            </div>
+            <p>We use the latest software and industry techniques to edit, repair and fix all faulty audio.</p>
+          </div>
+        </div>
+        <div class="lg:flex">
+          <div class="border-b border-black py-4 lg:ml-6 lg:border-b-0 lg:py-6  lg:w-[50%]">
+            <div class=" lg:border-r lg:border-black lg:pr-4 lg:pb-10">
+              <div class="flex w-full gap-2">
+                <img class="w-[26px] h-[26px]" src="../images/logo-dark.png" alt="">
+                <h3 class="text-xl font-medium mb-4">Audio Mixing</h3>
+              </div>
+              <p>We balance and refine your audio production to create dynamic and impactful final mixes ready
+                for mastering.</p>
+            </div>
+          </div>
+          <div class="border-b border-black py-4 lg:pl-6 lg:border-b-0 lg:py-6  lg:w-[50%]">
+            <div class="flex w-full gap-2">
+              <img class="w-[26px] h-[26px]" src="../images/logo-dark.png" alt="">
+              <h3 class="text-xl font-medium mb-4">Project Solutions</h3>
+            </div>
+            <p class="mb-8">Do you have a unique project?
+              Our end-to-end project solutions service is equipped to take on simple to complex projects.
+              Reach out to us with your big idea!</p>
+            <a href="/services"><p class="lg:hidden inline-block bg-black py-2 pl-5 pr-4 text-white rounded-xl">Services<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-m mx-auto">
+    <div class="mx-2 lg:flex border-b border-black lg:pb-6">
+      <div class="lg:w-[35%] lg:border-r lg:border-black lg:pr-8">
+        <img class="rounded-3xl" src="../images/Studio-23.jpg" alt="">
+      </div>
+      <div class="lg:w-[65%]">
+        <div class="lg:border-b lg:border-black lg:ml-6">
+          <div class="lg:pl-4 lg:pr-24">
+            <h2 class="font-primary text-2xl font-medium my-4 lg:text-4xl">Crafting Your Sound with Expertise and Passion</h2>
+          </div>
+        </div>
+        <div class="lg:pl-10 lg:pr-24 lg:mt-8">
+          <p class="mb-4">Welcome to AudioLabs!</p>
+          <p class="mb-4">Based in Melbourne/Narrm, we specialize in sound design, recording, mixing, and editing—all tailored to bring your vision to life. We've worked with musicians, podcasters, artists, and corporations, delivering top-quality audio across diverse projects.</p>
+          <p class="mb-4">
+          Our studio features high-end equipment for professional-grade recordings, offering complete audio solutions including sound engineering, project management, and equipment hire.</p>
+          <p class="mb-8">At AudioLabs, we blend technical expertise with creative flair to create exceptional audio content. Check out our portfolio and let’s bring your next project to life!</p>
+          <a href="/about"><p class="bg-black py-2 pl-5 pr-4 text-white inline-block rounded-xl mb-4">About us<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-m mx-auto">
+    <div class="mx-2 lg:flex lg:border-b lg:border-black">
+      <div class="border-b border-black  lg:w-[45%] lg:border-b-0 lg:border-r lg:my-6">
+        <h2 class="font-primary text-2xl font-medium my-4 lg:text-4xl">FEATURED WORK</h2>
+        <p class="pb-8">Check out our previous projects to get an idea of what we do, and how we can bring your next
+        production to life.</p>
+        <a href="/projects"><p class="hidden bg-black py-2 pl-5 pr-4 text-white lg:inline-block rounded-xl mb-4">See projects<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+      </div>
+      <div class="lg:w-[55%] lg:ml-6">
+        <div class="border-b border-black">
+          <div class="rounded-2xl my-4 lg:my-8 bg-[url(../images/PBC.jpg)] h-[210px] w-full bg-center bg-cover lg:h-[450px]"></div>
+          <p class="text-2xl font-medium mb-4">PBCmob</p>
+        </div>
+        <div class="lg:flex lg:border-b lg:border-black">
+          <div class="border-b border-black lg:border-b-0 lg:w-1/2">
+            <div  class=" lg:border-r lg:border-black lg:pr-6">
+              <div class="rounded-2xl my-4 lg:my-8 bg-[url(../images/aftertherain.jpg)] h-[210px] w-full bg-center bg-cover"></div>
+              <p class="text-2xl font-medium mb-4">After the Rain</p>
+            </div>
+          </div>
+          <div class="border-b border-black lg:border-b-0 lg:w-1/2 lg:pl-6">
+            <div class="rounded-2xl my-4 lg:my-8 bg-[url(../images/8ccc.jpg)] h-[210px] w-full bg-center bg-cover">
+            </div>
+            <p class="text-2xl font-medium mb-4">8CCC Radio</p>
+          </div>
+      </div>
+      <div class="lg:flex">
+        <div class="border-b border-black lg:border-b-0 lg:w-1/2">
+          <div class=" lg:border-r lg:border-black lg:pr-6">
+            <div class="rounded-2xl my-4 lg:my-8 bg-[url(../images/p&tt.jpg)] h-[210px] w-full bg-center bg-cover"></div>
+            <p class="text-2xl font-medium mb-4">Phil & the Tiles</p>
+          </div>
+        </div>
+        <div class="border-b border-black lg:border-b-0 lg:w-1/2 lg:pl-6">
+          <div class="rounded-2xl my-4 lg:my-8 bg-[url(../images/lsdeath.jpg)] h-[210px] w-full bg-center bg-cover"></div>
+          <p class="text-2xl font-medium mb-16">LSDeath</p>
+          <a href="/projects"><p class="lg:hidden inline-block bg-black mb-8 py-2 pl-5 pr-4 text-white rounded-xl">See Projects<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+        </div>
+      <div>
+    </div>
+  </section>
+  <section>
+    <div class="container-m mx-auto border-b border-black">
+      <div class="border-b border-black mx-2">
+        <h2 class="text-2xl lg:text-4xl font-medium py-6 text-center">What our clients say</h2>
+      </div>
+      <div class="relative">
+        <div class="w-[80%] xl:w-[60%] m-auto my-12 lg:my-16">
+          <div class="testimonial-carousel fade-in-up">
+            <div class="testimonial-item active-testimonial">
+              <p class="text-center mb-4">Very happy with Jack and the work we got done. Turned around a quote quickly and we were able to book it in shortly afterwards. Had great comms and the workmanship was excellent. Got an EV charger, several fans, and a new powerpoint installed. Would highly recommend Harrington Electrical.</p>
+              <p class="font-deco text-lg font-bold mb-2 text-center">Ettienne Gous</p>
+            </div>
+            <div class="testimonial-item">
+              <p class="text-center mb-4">Jack was amazing! He was punctual, professional and nothing was too difficult. I can't recommend Jack highly enough.  It is great to have a hard working honest, friendly electrician making everything just right in your home.</p>
+              <p class="font-deco text-lg font-bold mb-2 text-center">Diane Alice</p>
+            </div>
+            <div class="testimonial-item">
+              <p class="text-center mb-4">Professional, knowledgeable, responsible and hard worker, Jack is what you are looking for in an electrician to trust the work in your house. His work is exceptional and I can’t recommend him enough. The job is never too small or never too difficult, always “a can do” attitude which is exactly what I was looking for.</p>
+              <p class="font-deco text-lg font-bold mb-2 text-center">Johnny Gallardo</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+          </div>
+          <div class="testimonial-pagination fade-in-up">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <!-- Add more dots as needed -->
+          </div>
+        </div>
+        <div class="testimonial-controls fade-in-up xl:absolute xl:w-full">
+          <button class="prev-arrow" aria-label="Previous Arrow"><img src="../images/left-arrow.svg" class="h-5" alt="Previous arrow" ></button>
+          <button class="next-arrow" aria-label="Next Arrow"><img src="../images/right-arrow.svg" class="h-5" alt="Next Arrow"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-m mx-auto">
+    <div class="mx-2 border-b border-black lg:flex justify-between py-6">
+      <h2 class="text-2xl font-medium lg:text-4xl">Recent Articles</h2>
+      <a href="/articles"><p class="hidden bg-black py-2 pl-5 pr-4 text-white lg:inline-block rounded-xl">See all editorials<img class="inline-block ml-3" src="../images/arrow.svg" alt=""></p></a>
+    </div>
+    <div class="container-m mx-auto lg:py-6 lg:pb-0">
+      <div class="px-2 py-4 lg:py-0 lg:border-b border-black">
+        <div class="lg:grid lg:grid-cols-4">
+          {otherArticles.slice(0, HOMEPAGE_ARTICLE_LIMIT).map(article => (
+            <ArticleCard article={article} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+      // Testimonial Code
+  
+  class TestimonialCarousel {
+    private currentIndex: number = 0;
+    private items: NodeListOf<HTMLElement>;
+    private dots: NodeListOf<HTMLElement>;
+    private transitioning: boolean = false;
+  
+    constructor() {
+      this.items = document.querySelectorAll('.testimonial-item');
+      this.dots = document.querySelectorAll('.dot');
+      this.showItem(this.currentIndex);
+  
+      document.querySelector('.prev-arrow')?.addEventListener('click', () => this.prevItem());
+      document.querySelector('.next-arrow')?.addEventListener('click', () => this.nextItem());
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.showItem(index));
+      });
+    }
+  
+    private showItem(index: number) {
+      if (this.transitioning) return;
+      this.transitioning = true;
+  
+      const currentItem = this.items[this.currentIndex];
+      const nextItem = this.items[index];
+  
+      currentItem.classList.remove('active-testimonial', 'fade-in-testimonial');
+      currentItem.classList.add('fade-out-testimonial');
+  
+      nextItem.classList.add('active-testimonial', 'fade-in-testimonial');
+  
+      setTimeout(() => {
+        currentItem.classList.remove('fade-out-testimonial');
+        this.transitioning = false;
+      }, 500);
+  
+      this.dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      this.currentIndex = index;
+    }
+  
+    private prevItem() {
+      const index = (this.currentIndex - 1 + this.items.length) % this.items.length;
+      this.showItem(index);
+    }
+  
+    private nextItem() {
+      const index = (this.currentIndex + 1) % this.items.length;
+      this.showItem(index);
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    new TestimonialCarousel();
+  });
+  </script>
+</Layout>
+
