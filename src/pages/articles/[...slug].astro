@@ -19,13 +19,22 @@ const { entry } = Astro.props;
 
 const { Content } = await entry.render();
 ---
+<style is:global>
+    p {
+        margin: 20px 0;
+    }
+    h2 {
+        margin: 20px 0;
+        font-size: 1.8rem;
+    }
 
+</style>
 <Layout>
     <section class="container-m mx-auto">
         <div class="px-2">
             <article class="border-b border-black mb-6 lg:mb-0">
                 <div class="lg:flex lg:my-10">
-                    <div class="lg:w-[35%] pr-10 lg:border-r lg:border-black">
+                    <div class="mt-2 lg:mt-0 lg:w-[35%] lg:pr-10 lg:border-r lg:border-black">
                         <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl mb-6" />
                     </div>
                     <div class="lg:w-[65%] lg:mx-10">
@@ -42,13 +51,3 @@ const { Content } = await entry.render();
     </section>
 </Layout>
 
-<style is:global>
-    p {
-        margin: 20px 0;
-    }
-    h2 {
-        margin: 20px 0;
-        font-size: 1.8rem;
-    }
-
-</style>
