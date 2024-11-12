@@ -2,11 +2,12 @@
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants'
-const { title ='Default' } = Astro.props
+const { title ='Default', description ='Default' } = Astro.props
 import '../styles/global.css'
 
 interface Props {
   title?: string;
+  description?: string;
   
 }
 ---
@@ -16,7 +17,7 @@ interface Props {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={SITE_DESCRIPTION}>
+    <meta name="description" content={description}>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js"
       integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
@@ -35,4 +36,16 @@ interface Props {
     <Footer />
     </body>
     <script src="../utils.ts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script> 
+    <script src="../smoothScroll.ts"></script>
+    <script  type="module">
+      let tl = gsap.timeline()
+
+      tl.to('.fade-in', {
+        x: 800
+      })
+    </script>
   </html>

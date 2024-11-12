@@ -37,7 +37,7 @@ interface Props {
 <!-- Article Card -->
  <div class="article-container border-b border-black mb-6 lg:mb-0 lg:border-b-0">
    <a href={'/articles/' + article.slug} class="lg:border-b-0 pt-4">
-     <img src={'/images/' + article.data.image} alt="">
+     <img src={'/images/' + article.data.image} alt={article.data.articleNumber + 'image'}>
      <div class="py-4">
        <p class="text-[#E56134] text-sm font-deco">{formatDate(article.data.pubDate)}</p>
        <h5 class="text-xl font-medium my-2">{article.data.title}</h5>
