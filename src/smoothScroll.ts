@@ -2,7 +2,8 @@ import Lenis from 'lenis';
 
 const lenis = new Lenis();
 
-lenis.on('scroll', (e: Event) => {
+// Remove explicit `Event` type so TypeScript can infer it correctly
+lenis.on('scroll', (e) => {
   console.log(e);
 });
 
