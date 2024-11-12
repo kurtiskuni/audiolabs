@@ -1,7 +1,12 @@
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 
+import tailwind from '@astrojs/tailwind';
+
 export default defineConfig({
-  output: 'hybrid', // or 'hybrid' if needed
+  // or 'hybrid' if needed
+  output: 'hybrid',
+
   adapter: netlify(),
+  integrations: [tailwind()],
 });
