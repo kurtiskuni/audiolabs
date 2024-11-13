@@ -2,7 +2,7 @@
 title: 'AudioLabs—The Evolution of My Freelance Journey'
 articleNumber: 'Editorial - 001'
 pubDate: 2024-01-20
-image: 'editorial_001.png'
+image: 'editorial_001.webp'
 slug: evolution-of-my-freelance-journey
 ---
 AudioLabs is the second chapter in my freelance journey, which began under the name Strange Space Studios back in 2020. When I first started thinking about what I wanted to offer through this business, I wasn’t exactly sure where to anchor myself.
