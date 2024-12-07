@@ -21,26 +21,26 @@ import Layout from '../layouts/Layout.astro'
                             <div class="lg:flex lg:gap-6">
                                 <div class="lg:w-[50%]">
                                     <label class="block mt-4 lg:mt-0 font-medium" for="name">Name:</label>
-                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="name" id="name" placeholder="Ben Klock">
+                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="name" id="name" placeholder="Ben Klock" required>
                                 </div>
                                 <div class="lg:w-[50%]">
                                     <label class="block mt-4  lg:mt-0 font-medium" for="name">Email:</label>
-                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="email" id="email" placeholder="benklock@gmail.com">
+                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="email" id="email" placeholder="benklock@gmail.com" required>
                                 </div>
                             </div>
                             <div class="lg:flex lg:gap-6 lg:mt-2">
                                 <div class="lg:w-[50%]">
                                     <label class="block mt-4 font-medium" for="number">Phone Number:</label>
-                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="phone" id="phone" placeholder="0466 923 884">
+                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="phone" id="phone" placeholder="0466 923 884" required>
                                 </div>
                                 <div class="lg:w-[50%]">
                                     <label class="block mt-4 font-medium" for="subject">Subject:</label>
-                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="subject" id="subject" placeholder="New track mixing">
+                                    <input class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" type="text" name="subject" id="subject" placeholder="New track mixing" required>
                                 </div>
                             </div>
                             <div class="lg:mt-6">
                                 <label class="block mt-4 font-medium" for="message">Message:</label>
-                                <textarea class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" name="message" id="message" placeholder="Message" rows="6s"></textarea>
+                                <textarea class="w-full py-2 border-b border-black bg-customPrimary rounded-none pb-1 font-deco" name="message" id="message" placeholder="Message" rows="6s" required></textarea>
                             </div>
                             <button class="text-center mt-4" type="submit"><p class="inline-block bg-black py-2 pl-5 pr-4 text-white rounded-xl xl:mb-6">Send message<img class="inline-block ml-3" src="../images/arrow.svg" alt="arrow icon"></p></button>
                         </form>
