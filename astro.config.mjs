@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   // or 'hybrid' if needed
-  output: 'hybrid',
+  output: 'static',
 
   adapter: netlify(),
   integrations: [tailwind()],
