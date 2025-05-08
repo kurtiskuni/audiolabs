@@ -39,7 +39,7 @@ interface Props {
    <a href={'/articles/' + article.slug} class="lg:border-b-0 pt-4">
      <img src={'/images/' + article.data.image} alt={article.data.articleNumber + 'image'}>
      <div class="py-4">
-       <p class="text-[#E56134] text-sm font-deco">{formatDate(article.data.pubDate)}</p>
+       <span class="text-[#ec3b00] text-sm font-deco">{formatDate(article.data.pubDate)}</span>
        <h4 class="text-xl font-medium my-2">{article.data.title}</h4>
        <p class="font-deco">{article.data.articleNumber}</p>
        </div>
