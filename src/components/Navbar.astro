@@ -39,47 +39,47 @@ import logo from '../images/logo-dark.png';
 <header id="header" class='navbar z-50 bg-customPrimary'>
   <div class="mt-0 xl:flex xl:items-center xl:justify-between container-m m-auto px-2 xl:border-b xl:border-black">
     <div class='flex items-center justify-between py-3 xl:w-auto z-50 xl:mr-0 xl:ml-0 relative border-b border-black xl:border-none'>
-      <a href="/" class='logo w-9 xl:w-12 hover:scale-105 transition-all duration-500'>
+      <a href="/" class='logo w-9 xl:w-12 hover:scale-105 transition-all duration-500' aria-label="Link to homepage">
         <Image src={logo} alt=""/>
       </a>
-      <button class='menu-button xl:hidden border border-[#151E1E] text-[#151e1e] py-[.3rem] px-[1rem] rounded-full text-sm'>Menu</button>
+      <button class='menu-button xl:hidden border border-[#151E1E] text-[#151e1e] py-[.3rem] px-[1rem] rounded-full text-sm' aria-label="Menu button">Menu</button>
     </div>
     <div class='absolute xl:relative bg-[#B4B2B2] xl:bg-inherit w-full top-0 right-0 xl:w-full xl:px:0 xl:pl-20 xl:pr-0 xl:flex xl:top-auto xl:right-auto z-40'>
       <nav class='hidden border-2 border-black px-4 xl:p-0 xl:border-none text-black w-full pt-[4.5rem] xl:flex xl:h-min h-screen xl:pt-0 xl:mt-0 xl:items-center xl:justify-end'>
         <ul class='border-b xl:border-none border-black border-opacity-20 flex flex-col xl:flex-row xl:items-center xl:w-[50%]'>
           <div class='nav-links border-b xl:border-none border-black border-opacity-20 text-black xl:text-[#151E1E] xl:flex xl:w-full xl:justify-between'>
             <li class="menu-item">
-              <a href='/services' class="py-4 border-b xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='/services' class="py-4 border-b xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium" aria-label="Link to services page">
                 <h3>SERVICES</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/arrow-right-solid.svg" alt="Toggle" />
               </a>
             </li>
             <li class="menu-item">
-              <a href='/projects' class="border-b border-t xl:border-none border-black border-opacity-20 py-4 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='/projects' class="border-b border-t xl:border-none border-black border-opacity-20 py-4 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium" aria-label="Link to project page">
                 <h3>PROJECTS</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/arrow-right-solid.svg" alt="Toggle" />
               </a>
             </li>
             <li class="menu-item">
-              <a href='/articles' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='/articles' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium"  aria-label="Link to blog page">
                 <h3>EDITORIAL</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/arrow-right-solid.svg" alt="Toggle" />
               </a>
             </li>
             <li class="menu-item">
-              <a href='/about' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='/about' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium"  aria-label="Link to about page">
                 <h3>ABOUT</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/arrow-right-solid.svg" alt="Toggle" />
               </a>
             </li>
             <li class="menu-item">
-              <a href='/contact' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='/contact' class="py-4 border-b border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium" aria-label="Link to contact page">
                 <h3>CONTACT</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/arrow-right-solid.svg" alt="Toggle" />
               </a>
             </li>
             <li class="menu-item xl:hidden">
-              <a href='https://www.instagram.com/audiolabs.au/' target="_blank" class="py-4 border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium">
+              <a href='https://www.instagram.com/audiolabs.au/' target="_blank" class="py-4 border-t xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium" aria-label="Link to Instagram">
                 <h3>INSTAGRAM</h3>
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/up-right-from-square-solid.svg" alt="Toggle" />
               </a>

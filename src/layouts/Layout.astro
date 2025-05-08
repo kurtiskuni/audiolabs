@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants'
 const { title ='Default', description ='Default' } = Astro.props
 import '../styles/global.css'
+const heroImage = '/images/Studio-15.webp.jpg';
 
 interface Props {
   title?: string;
@@ -19,6 +20,7 @@ interface Props {
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description}>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js" as="script" type="application/javascript" crossorigin="anonymous">
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js"
       integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
