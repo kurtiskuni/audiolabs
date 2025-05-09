@@ -37,12 +37,11 @@ interface Props {
 <!-- Article Card -->
  <div class="article-container border-b border-black mb-6 lg:mb-0 lg:border-b-0">
    <a href={'/articles/' + article.slug} class="lg:border-b-0 pt-4">
-     <img src={'/images/' + article.data.image} alt={article.data.articleNumber + 'image'}>
+     <img src={'/images/' + article.data.image} alt={article.data.articleNumber + 'image'} loading="lazy">
      <div class="py-4">
        <span class="text-[#ec3b00] text-sm font-deco">{formatDate(article.data.pubDate)}</span>
        <h4 class="text-xl font-medium my-2">{article.data.title}</h4>
        <p class="font-deco">{article.data.articleNumber}</p>
-       </div>
      </div>
    </a>
  </div>

@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from '../images/logo-dark.png';
+import logo from '../images/logo-dark.webp';
 ---
 <style>
   .nav-hidden {
@@ -46,8 +46,8 @@ import logo from '../images/logo-dark.png';
     </div>
     <div class='absolute xl:relative bg-[#B4B2B2] xl:bg-inherit w-full top-0 right-0 xl:w-full xl:px:0 xl:pl-20 xl:pr-0 xl:flex xl:top-auto xl:right-auto z-40'>
       <nav class='hidden border-2 border-black px-4 xl:p-0 xl:border-none text-black w-full pt-[4.5rem] xl:flex xl:h-min h-screen xl:pt-0 xl:mt-0 xl:items-center xl:justify-end'>
-        <ul class='border-b xl:border-none border-black border-opacity-20 flex flex-col xl:flex-row xl:items-center xl:w-[50%]'>
-          <div class='nav-links border-b xl:border-none border-black border-opacity-20 text-black xl:text-[#151E1E] xl:flex xl:w-full xl:justify-between'>
+        <div class='border-b xl:border-none border-black border-opacity-20 flex flex-col xl:flex-row xl:items-center xl:w-[50%]'>
+          <ul class='nav-links border-b xl:border-none border-black border-opacity-20 text-black xl:text-[#151E1E] xl:flex xl:w-full xl:justify-between'>
             <li class="menu-item">
               <a href='/services' class="py-4 border-b xl:border-none border-black border-opacity-20 font-normal w-full flex justify-between xl:justify-normal text-base items-center xl:font-medium" aria-label="Link to services page">
                 <h3>SERVICES</h3>
@@ -84,8 +84,8 @@ import logo from '../images/logo-dark.png';
                 <img class='w-3 xl:hidden xl:ml-2 xl:pt-1' src="/images/up-right-from-square-solid.svg" alt="Toggle" />
               </a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
   </div>
