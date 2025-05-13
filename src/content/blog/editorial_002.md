@@ -1,7 +1,7 @@
 ---
 title: 'The Studio — Iterations Over 10 Years'
 articleNumber: 'Editorial - 002'
-pubDate: 2024-01-20
+pubDate: 2024-10-17
 image: 'editorial_002.webp'
 slug: studio-iterations-over-10-years
 ---

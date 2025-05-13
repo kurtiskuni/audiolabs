@@ -1,7 +1,7 @@
 ---
 title: 'AudioLabs—The Evolution of My Freelance Journey'
 articleNumber: 'Editorial - 001'
-pubDate: 2024-01-20
+pubDate: 2024-10-11
 image: 'editorial_001.webp'
 slug: evolution-of-my-freelance-journey
 ---
