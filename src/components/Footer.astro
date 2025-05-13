@@ -1,6 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import logo from '../images/logo-dark.png';
+import instaLogo from '../images/instagram.svg';
+import facebookLogo from '../images/facebook.svg';
+import aboriginalFlag from '../images/aboriginal-flag.png';
+import torresFlag from '../images/torres.png';
+
 ---
 
 <footer class="container-m mx-auto">
@@ -11,8 +16,8 @@ import logo from '../images/logo-dark.png';
         <p class="font-bold text-lg mb-2">AudioLabs</p>
         <p class="mb-2 w-[150px]">Alphington, Melbourne VIC 3078</p>
         <div class="flex gap-2">
-          <a href="https://www.instagram.com/audiolabs.au/" target="_blank"  aria-label="Link to Instagram page"><img src="../images/instagram.svg" alt="Instagram Logo"></a>
-          <a href="https://www.facebook.com/ben.collinsgraham" target="_blank" aria-label="Link to Facebook page"><img src="../images/facebook.svg" alt="Facebook logo"></a>
+          <a href="https://www.instagram.com/audiolabs.au/" target="_blank"  aria-label="Link to Instagram page"><Image src={instaLogo} alt="Instagram Logo"></a>
+          <a href="https://www.facebook.com/ben.collinsgraham" target="_blank" aria-label="Link to Facebook page"><Image src={facebookLogo} alt="Facebook logo"></a>
           
         </div>
       </div>
@@ -40,8 +45,9 @@ import logo from '../images/logo-dark.png';
       <p class="text-lg font-medium mb-2">Acknowledgment of Country</p>
       <p class="mb-3 text-sm">AudioLabs acknowledges the Wurundjeri Woi Wurrung people as the Traditional Custodians of the land on which we operate in Alphington, Melbourne. We pay our respects to their Elders past, present, and emerging.</p>
       <div class="flex gap-2">
-        <img class="w-[40px] h-auto" src="../images/aboriginal-flag.png" alt="aboriginal flag">
-        <img class="w-[40px] h-auto" src="../images/torres.png" alt="torres strait flag">
+        <Image class="w-[40px] h-auto" src={aboriginalFlag} alt="aboriginal flag"></Image>
+        <Image class="w-[40px] h-auto" src={torresFlag} alt="torres strait flag"></Image>
+
       </div>
     </div>
     <div class="mt-6 lg:mb-0 lg:content-end">

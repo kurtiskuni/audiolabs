@@ -61,7 +61,7 @@ The power duo behind the festival’s twilight projection and lighting design br
 
 The underlying theme of the set; connection to ancestors and to country resonated across the dance floor and was perfectly situated in the bush.
 
-Listen to Little Desert’s set via this [link](https://www.mixcloud.com/3TripleQua/little-desert-live-obliqua-2025/).
+Listen to Little Desert’s set via this **[link](https://www.mixcloud.com/3TripleQua/little-desert-live-obliqua-2025/)**.
 
 
 *I remember getting very cold during this performance as I hadn’t changed for nighttime, but I couldn’t leave the stage!*
