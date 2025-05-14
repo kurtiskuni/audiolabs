@@ -16,9 +16,6 @@ The grassroots event was comprised of a main stage, tea lounge and sunset stage�
 
 With a stacked lineup of passionate DJ’s, a sound system with subwoofers modelled on Danley’s TH112, a curated, well executed program and a Bitchin’ Kitchen, Obliqua kicked off on **Jan 31 2024** and concluded on **2 Jan 2025**. Allowing the punters 4 full days to do what they do best..
 
-With a stacked lineup of passionate DJ’s, a sound system with subwoofers modelled on
-Danley’s TH112, a curated, well executed program and a Bitchin’ Kitchen, Obliqua kicked off on Jan 31 2024 and concluded on 2 Jan 2025. Allowing the punters 4 full days to do what they do best..
-
 AudioLabs’ role was to record DJ sets performed on the main stage. A bold structure that stood proud in the performance arena and transformed into a psychedelic projection medium once the sun had ducked behind the obliqua trees.
 
 We used the **Rodecaster Pro II** for a “set-and-forget” approach, capturing entire days of recordings. This device was chosen over alternatives like the Zoom recorder for its ability to record directly through its preamps onto a **Samsung 4TB SSD**. Its overwrite and autosave functions proved invaluable, especially during power outages.
